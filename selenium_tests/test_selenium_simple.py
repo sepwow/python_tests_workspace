@@ -10,8 +10,7 @@ def test_search_example(selenium):
     time.sleep(5)  # just for demo purposes, do NOT repeat it on real projects!
 
     # Find the field for search text input:
-    search_input = selenium.find_element_by_name('q')
-
+    search_input = selenium.find_element("name", "q")
 
     # Enter the text for search:
     search_input.clear()
@@ -20,7 +19,7 @@ def test_search_example(selenium):
     time.sleep(5)  # just for demo purposes, do NOT repeat it on real projects!
 
     # Click Search:
-    search_button = selenium.find_element_by_name('btnK')
+    search_button = selenium.find_element("name", "btnK")
     search_button.submit()
 
     time.sleep(10)  # just for demo purposes, do NOT repeat it on real projects!
@@ -28,4 +27,4 @@ def test_search_example(selenium):
     # Make the screenshot of browser window:
     selenium.save_screenshot('result.png')
 
-    # python3 -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/chromedriver.exe  test_selenium_simple.py
+    # pytest -v --driver Chrome --driver-path /PycharmProjects/chromedriver.exe test_selenium_simple.py
