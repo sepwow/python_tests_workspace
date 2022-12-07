@@ -27,4 +27,4 @@ def test_search_example(selenium):
     # Make the screenshot of browser window:
     selenium.save_screenshot('result.png')
 
-    # pytest -v --driver Chrome --driver-path /PycharmProjects/chromedriver.exe test_selenium_simple.py
+    # pytest -v --driver Chrome --driver-path /PycharmProjects/chromedriver.exe selenium_tests/test_selenium_simple.py
