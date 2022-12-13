@@ -40,9 +40,6 @@ def test_pets_quantity(driver):
 
     driver.set_window_size(1920, 1080)
 
-    # btn_hamburger = driver.find_element(By.CSS_SELECTOR, ".navbar-toggler.collapsed")
-    # btn_hamburger.click()
-
     time.sleep(1)
 
     btn_my_pets = driver.find_element(By.CSS_SELECTOR, ".nav-link[href='/my_pets']")
@@ -50,24 +47,9 @@ def test_pets_quantity(driver):
 
     time.sleep(3)
 
-    # tr_list = driver.find_element(By.XPATH, '//*[@id="all_my_pets"]/table/tbody/tr')
-    # q_tr = len(tr_list)
-
-    # text = urllib.request.urlopen('https://petfriends.skillfactory.ru/my_pets').read()
-    # soup = BeautifulSoup(text)
-    # tr_list = soup.select('.table.table-hover>tbody>tr')
-    # q_tr = len(tr_list)
-
     tr_list = driver.find_elements(By.XPATH,
                                    '//*[@id="all_my_pets"]/table/tbody/tr')
     q_tr = str(len(tr_list))
-
-    # sauce = urllib.request.urlopen('https://petfriends.skillfactory.ru/my_pets').read()
-    # soup = bs.BeautifulSoup(sauce, 'lxml')
-    #
-    # table = soup.find('tbody')
-    # tr_list = table.find_all('tr')
-    # q_tr = len(tr_list)
 
     pets_numb = driver.find_element(By.XPATH,
                                     '//div[@class=".col-sm-4 left"]').text.split('\n')[1].split(": ")[1]
@@ -76,26 +58,6 @@ def test_pets_quantity(driver):
     # tr_list = driver.find_element(By.CSS_SELECTOR, '.table.table-hover tbody tr')
     # q_tr = str(len(tr_list))
 
-    # tr_list = driver.find_element(By.XPATH, '//*[@id="all_my_pets"]/table/tbody/tr')
-    # q_tr = str(len(tr_list))
-
-    # tr_list = driver.find_element(By.XPATH, '//table[@class=\"table.table-hover\"]/tbody/tr')
-    # q_tr = str(len(tr_list))
-
-    # tr_list = lxml.html.fragment_fromstring(html, create_parent = True)
-    # tr_list.xpath('count(table[@class="table.table-hover"]/tbody/tr)')
-
-    # text = driver.find_element(By.PARTIAL_LINK_TEXT, "Питомцев:")
-    # print(text)
-    # time.sleep(5)
-
-    # findbytext = GetText()
-    # text = findbytext.gettext()
-
-    # assert text[:-1:] == q_tr
     assert pets_numb == q_tr
 
-    # pytest -v --driver Chrome --driver-path /PycharmProjects/chromedriver.exe selenium_tests/selenium001.py
-
-
-
+    # pytest -v --driver Chrome --driver-path /PycharmProjects/chromedriver.exe selenium_tests/25_3_1.py

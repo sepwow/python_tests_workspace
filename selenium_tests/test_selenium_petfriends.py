@@ -1,10 +1,10 @@
 import time
-from dotenv import *
 from config import email, password
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from gettext import GetText
 
 
 def test_petfriends(driver):

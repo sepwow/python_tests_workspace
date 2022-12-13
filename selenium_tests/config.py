@@ -5,5 +5,5 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-email = os.getenv('email')
-password = os.getenv('password')
+valid_email = os.getenv('email')
+valid_password = os.getenv('password')
