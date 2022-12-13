@@ -38,6 +38,9 @@ def test_pets_quantity(driver):
 
     time.sleep(3)
 
+    # btn_hamburger = driver.find_element(By.CSS_SELECTOR, ".navbar-toggler.collapsed")
+    # btn_hamburger.click()
+
     driver.set_window_size(1920, 1080)
 
     time.sleep(1)
